@@ -1,0 +1,38 @@
+<template name="header">
+  <nav>
+    <div class="nav-wrapper light-blue darken-2">
+      <a href="{{pathFor 'home'}}" class="brand-logo">Logo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+      <!-- <ul class="left hide-on-med-and-down">
+
+        <li class=" {{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}"><i class="material-icons left">home</i> Home</a></li>
+
+      </ul> -->
+
+      <ul class="right hide-on-med-and-down">
+
+        {{#if currentUser}}
+            <li class="{{ isActiveRoute regex='dashboard' }}"><a href="{{ pathFor 'dashboard' }}"><i class="material-icons">dashboard</i></a></li>
+            <li><a href="#" data-action="logout"><i class="material-icons">lock</i></a></li>
+        {{else}}
+            <li><a href="{{ pathFor 'atSignIn' }}" class="signin">Sign in</a></li>
+            <li><a href="{{ pathFor 'atSignUp' }}" class="register">Register</a></li>
+        {{/if}}
+
+      </ul>
+
+      <ul class="side-nav" id="mobile-demo">
+            <li class="{{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}"><i class="material-icons left">home</i>Home</a></li>
+        {{#if currentUser}}
+            <li class="{{ isActiveRoute regex='dashboard' }}"><a href="{{ pathFor 'dashboard' }}"><i class="material-icons left">dashboard</i>Dashboard</a></li>
+            <li><a href="#" data-action="logout"><i class="material-icons left">lock</i>Logout</a></li>
+        {{else}}
+            <li><a href="{{ pathFor 'atSignIn' }}" class="signin">Sign in</a></li>
+            <li><a href="{{ pathFor 'atSignUp' }}" class="register">Register</a></li>
+        {{/if}}
+      </ul>
+    </div>
+
+  </nav>
+</template>
