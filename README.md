@@ -21,13 +21,13 @@ A starting point for MeteorJS applications. Includes iron-router, Bootstrap 3, F
   * [zimme:iron-router-active](https://github.com/zimme/meteor-iron-router-active)
   * [yasinuslu:blaze-meta](https://github.com/yasinuslu/blaze-meta)
 * Authentication
-  * [splendido:accounts-templates-bootstrap](https://github.com/splendido/accounts-templates-bootstrap)
+  * [useraccounts:materialize](https://atmospherejs.com/useraccounts/materialize)
   * [alanning:roles](https://github.com/alanning/meteor-roles)
 * Seed Data
   * [dburles:factory](https://github.com/percolatestudio/meteor-factory)
   * [anti:fake](https://github.com/anticoders/meteor-fake/)
 * [Less](http://lesscss.org)
-  * [Bootstrap](http://getbootstrap.com)
+  * [Materialize](http://materializecss.com/)
   * [Font Awesome](http://fontawesome.io)
 * Misc:
   * [Moment.js](http://momentjs.com/)
@@ -49,7 +49,7 @@ A starting point for MeteorJS applications. Includes iron-router, Bootstrap 3, F
 
 ## <a name="file-structure"></a> File Structure
 
-We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the `both` directory. The `private` and `public` directories are for either private or public assets. 
+We have a common file structure we use across all of our Meteor apps. Client-only files are stored in the `client` directory, server-only files are stored in the `server` directory, and shared files are stored in the `both` directory. The `private` and `public` directories are for either private or public assets.
 
 ## <a name="bootstrap-and-less"></a> Bootstrap and LESS
 

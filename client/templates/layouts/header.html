@@ -1,17 +1,13 @@
 <template name="header">
   <nav>
     <div class="nav-wrapper light-blue darken-2">
+      {{#if currentUser}}
+      <a href="#" data-activates="profile-nav" class="profile-button-collapse right"><i class="material-icons">more_vert</i></a>
+      {{/if}}
       <a href="{{pathFor 'home'}}" class="brand-logo">Logo</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-
-      <!-- <ul class="left hide-on-med-and-down">
-
-        <li class=" {{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}"><i class="material-icons left">home</i> Home</a></li>
-
-      </ul> -->
-
+      <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+<!-- MENU ITEMS -->
       <ul class="right hide-on-med-and-down">
-
         {{#if currentUser}}
             <li class="{{ isActiveRoute regex='dashboard' }}"><a href="{{ pathFor 'dashboard' }}"><i class="material-icons">dashboard</i></a></li>
             <li><a href="#" data-action="logout"><i class="material-icons">lock</i></a></li>
@@ -20,9 +16,9 @@
             <li><a href="{{ pathFor 'atSignUp' }}" class="register">Register</a></li>
         {{/if}}
 
+<!-- SIDEBAR ITEMS -->
       </ul>
-
-      <ul class="side-nav" id="mobile-demo">
+      <ul class="side-nav" id="mobile-nav">
             <li class="{{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}"><i class="material-icons left">home</i>Home</a></li>
         {{#if currentUser}}
             <li class="{{ isActiveRoute regex='dashboard' }}"><a href="{{ pathFor 'dashboard' }}"><i class="material-icons left">dashboard</i>Dashboard</a></li>
@@ -32,6 +28,12 @@
             <li><a href="{{ pathFor 'atSignUp' }}" class="register">Register</a></li>
         {{/if}}
       </ul>
+<!-- PROFILE SIDEBAR ITEMS -->
+
+      <ul class="side-nav" id="profile-nav" >
+        <li class="{{ isActiveRoute regex='home' }}"><a href="{{ pathFor 'home' }}"><i class="material-icons left">home</i>Home</a></li>
+      </ul>
+
     </div>
 
   </nav>
